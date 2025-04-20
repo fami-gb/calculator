@@ -1,0 +1,38 @@
+button {
+    margin: 2px;
+    padding: 5% 5%;
+    font-size: large;
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 20%;
+    height: 20%;
+    box-shadow: 2px 2px 5px gray;
+}
+
+button:hover {
+    background-color: dimgray;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.display {
+    font-size: large;
+    height: 50px;
+    border-radius: 15px;
+    text-align: right;
+    box-shadow: 2px 2px 5px gray;
+    margin-bottom: 7px;
+}
+
+.calculator {
+    padding: 1%;
+    border: 5px solid rgb(52, 192, 197);
+    border-radius: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
