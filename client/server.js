@@ -1,10 +1,16 @@
+import { infixToPostfix, evaluatePostfix } from '../formulaAnalysis.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    const display = document.getElementsByClassName('display')[0];
     const fetchBtn = document.getElementById('btn_eval');
+    const ulElement = document.getElementsByClassName('history-container')[0];
     fetchBtn.addEventListener('click', async () => {
-        const display = document.getElementsByClassName('display')[0];
-        const ulElement = document.getElementsByClassName('history-container')[0];
-        ulElement.className = 'history-container';
-        const calcResult = display.value;
+        // 数式取得->evaluateで構文解析・計算
+        const formula = display.value;
+        const result = evaluate(formula);
+        display.value = result;
+        if (result === 'Error') return;
+        const calcResult = formula + ' = ' + result;
         try {
             const response = await fetch('http://localhost:8000/api/data', {
                 method: 'POST',
@@ -30,3 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+function evaluate(expression) {
+    try {
+        const postfix = infixToPostfix(expression);
+        const result = evaluatePostfix(postfix);
+        return result;
+    } catch (error) {
+        console.error("Error evaluating expression:", error);
+        return 'Error';
+    }
+}
