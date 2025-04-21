@@ -3,7 +3,7 @@ import { infixToPostfix, evaluatePostfix } from './formulaAnalysis.js';
 document.addEventListener('DOMContentLoaded', () => {
     const display = document.getElementsByClassName('display')[0];
     const fetchBtn = document.getElementById('btn_eval');
-    const ulElement = document.getElementsByClassName('history-container')[0];
+    const ulElement = document.getElementsByClassName('history-list')[0];
     fetchBtn.addEventListener('click', async () => {
         // 数式取得->evaluateで構文解析・計算
         const formula = display.value;

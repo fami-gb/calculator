@@ -1,3 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    padding: 1%;
+    border: 5px solid rgb(52, 192, 197);
+    border-radius: 15px;
+}
+
+.display {
+    font-size: large;
+    height: 50px;
+    border-radius: 15px;
+    text-align: right;
+    box-shadow: 2px 2px 5px gray;
+    margin-bottom: 7px;
+}
+
 button {
     margin: 2px;
     padding: 5% 5%;
@@ -15,26 +37,10 @@ button:hover {
     cursor: pointer;
 }
 
-.display {
-    font-size: large;
-    height: 50px;
-    border-radius: 15px;
-    text-align: right;
-    box-shadow: 2px 2px 5px gray;
-    margin-bottom: 7px;
-}
-
-.calculator {
-    padding: 1%;
-    border: 5px solid rgb(52, 192, 197);
-    border-radius: 15px;
-}
-
 .history-container {
     margin: 2%;
     padding: 1%;
-    border: 2px solid gray;
-    border-radius: 15px;
+    border-left: 2px solid gray;
 }
 
 .history-list {
@@ -42,13 +48,14 @@ button:hover {
     padding: 0;
 }
 
-.calc-date {
-    color: lightgray;
+.history-list li {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.calc-date {
+    color: lightgray;
 }
