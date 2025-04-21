@@ -30,6 +30,22 @@ button:hover {
     border-radius: 15px;
 }
 
+.history-container {
+    margin: 2%;
+    padding: 1%;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+.history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.calc-date {
+    color: lightgray;
+}
+
 body {
     display: flex;
     justify-content: center;
