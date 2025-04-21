@@ -3,8 +3,7 @@ export function infixToPostfix(expression) {
     const stack = [];
     const output = [];
     
-    // 修正: 負の数を考慮したトークン化
-    const tokens = expression.match(/-?\d+\.\d+|-?\d+|\+|\-|\*|\/|\(|\)/g);
+    const tokens = expression.match(/(\d+\.\d+|\d+|[\+\-\*\/\(\)])|-/g);
     
     tokens.forEach((token, index) => {
         if (/^-?\d+(\.\d+)?$/.test(token)) {
