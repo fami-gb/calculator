@@ -1,4 +1,4 @@
-import { infixToPostfix, evaluatePostfix } from '../formulaAnalysis.js';
+import { infixToPostfix, evaluatePostfix } from './formulaAnalysis.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const display = document.getElementsByClassName('display')[0];
