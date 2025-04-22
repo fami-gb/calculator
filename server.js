@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (result === 'Error') return;
         const calcResult = formula + ' = ' + result;
         try {
-            const response = await fetch('http://192.168.10.12:8000/api/data', {
+            const response = await fetch('https://192.168.10.12:8000/api/data', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ result: calcResult })
